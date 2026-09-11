@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Football Player Profile</title>
+
+    <style>
+
+        /* ============================= */
+        /* GENERAL STYLES */
+        /* ============================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f9f6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+
+        /* ============================= */
+        /* HEADER */
+        /* ============================= */
+
+        .header {
+            background-color: #12372a;
+            min-height: 100px;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            position: absolute;
+            left: 25px;
+            top: 15px;
+        }
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+
+        /* WEBSITE TITLE */
+
+        h1 {
+            color: white;
+            margin: 0;
+            padding-top: 5px;
+            letter-spacing: 3px;
+        }
+
+
+        /* ============================= */
+        /* NAVIGATION */
+        /* ============================= */
+
+        .navigation {
+            position: absolute;
+            right: 30px;
+            top: 25px;
+        }
+
+        .navigation a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .navigation a:hover {
+            background-color: #d4af37;
+            color: black;
+            transition: 0.3s;
+        }
+
+
+        /* ============================= */
+        /* MAIN HEADING */
+        /* ============================= */
+
+        h2 {
+            text-align: center;
+            color: #12372a;
+            margin: 30px 10px;
+        }
+
+
+        /* ============================= */
+        /* CONTAINER */
+        /* ============================= */
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+
+        /* ============================= */
+        /* PLAYER PROFILE */
+        /* ============================= */
+
+        .profile {
+            width: 100%;
+            background-color: white;
+            margin: 0;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px gray;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 220px;
+            height: 250px;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .profile h3 {
+            color: #12372a;
+            font-size: 25px;
+        }
+
+        .profile p {
+            line-height: 1.6;
+        }
+
+
+        /* ============================= */
+        /* INFORMATION BOXES */
+        /* ============================= */
+
+        .info {
+            flex: 1 1 calc(50% - 25px);
+            min-width: 300px;
+            min-height: 240px;
+
+            background-color: white;
+            padding: 25px;
+
+            border-radius: 12px;
+            box-shadow: 0 3px 8px gray;
+
+            text-align: center;
+        }
+
+        .info h3 {
+            color: #12372a;
+            font-size: 21px;
+        }
+
+        .info p {
+            line-height: 1.6;
+        }
+
+
+        /* ============================= */
+        /* FOOTER */
+        /* ============================= */
+
+        .footer {
+            background-color: #12372a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           TABLET MEDIA QUERY
+           601px - 900px
+        ========================================= */
+
+        @media screen and (max-width: 900px) {
+
+            /* HEADER */
+
+            .header {
+                padding: 20px;
+            }
+
+
+            /* LOGO */
+
+            .logo {
+                left: 20px;
+                top: 12px;
+            }
+
+            .logo img {
+                width: 55px;
+                height: 55px;
+            }
+
+
+            /* TITLE */
+
+            h1 {
+                font-size: 30px;
+            }
+
+
+            /* NAVIGATION */
+
+            .navigation {
+                position: static;
+                margin-top: 20px;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .navigation a {
+                font-size: 16px;
+                margin: 5px;
+                padding: 8px 12px;
+            }
+
+
+            /* MAIN HEADING */
+
+            h2 {
+                font-size: 25px;
+                margin: 25px 10px;
+            }
+
+
+            /* CONTAINER */
+
+            .container {
+                width: 94%;
+                gap: 20px;
+            }
+
+
+            /* PROFILE */
+
+            .profile {
+                padding: 20px;
+            }
+
+            .profile img {
+                width: 200px;
+                height: 230px;
+            }
+
+            .profile h3 {
+                font-size: 23px;
+            }
+
+
+            /* INFORMATION BOXES */
+
+            .info {
+                flex: 1 1 calc(50% - 20px);
+                min-width: 250px;
+                min-height: 220px;
+                padding: 20px;
+            }
+
+            .info h3 {
+                font-size: 20px;
+            }
+
+            .info p {
+                font-size: 15px;
+            }
+
+
+            /* FOOTER */
+
+            .footer {
+                padding: 20px;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE MEDIA QUERY
+           600px AND BELOW
+        ========================================= */
+
+        @media screen and (max-width: 600px) {
+
+            /* BODY */
+
+            body {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+
+            /* HEADER */
+
+            .header {
+                padding: 18px 10px 20px;
+            }
+
+
+            /* LOGO */
+
+            .logo {
+                position: static;
+                margin-bottom: 10px;
+            }
+
+            .logo img {
+                width: 55px;
+                height: 55px;
+            }
+
+
+            /* WEBSITE TITLE */
+
+            h1 {
+                font-size: 24px;
+                letter-spacing: 2px;
+            }
+
+
+            /* NAVIGATION */
+
+            .navigation {
+                position: static;
+                display: block;
+                margin-top: 15px;
+            }
+
+            .navigation a {
+                display: block;
+                width: 90%;
+                max-width: 300px;
+                margin: 8px auto;
+                padding: 10px;
+                font-size: 15px;
+            }
+
+
+            /* MAIN HEADING */
+
+            h2 {
+                font-size: 20px;
+                margin: 20px 10px;
+            }
+
+
+            /* CONTAINER */
+
+            .container {
+                width: 92%;
+                display: block;
+            }
+
+
+            /* PLAYER PROFILE */
+
+            .profile {
+                width: 100%;
+                padding: 18px;
+                margin-bottom: 20px;
+            }
+
+
+            /* PLAYER IMAGE */
+
+            .profile img {
+                width: 180px;
+                height: 210px;
+                max-width: 100%;
+            }
+
+
+            /* PROFILE TITLE */
+
+            .profile h3 {
+                font-size: 21px;
+            }
+
+
+            /* PROFILE TEXT */
+
+            .profile p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+
+            /* INFORMATION BOXES */
+
+            .info {
+                width: 100%;
+                min-width: 0;
+                min-height: 0;
+
+                margin-bottom: 20px;
+                padding: 18px;
+            }
+
+
+            /* INFORMATION HEADINGS */
+
+            .info h3 {
+                font-size: 19px;
+            }
+
+
+            /* INFORMATION TEXT */
+
+            .info p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+
+            /* FOOTER */
+
+            .footer {
+                margin-top: 20px;
+                padding: 18px 10px;
+                font-size: 13px;
+            }
+
+        }
+
+
+        /* =========================================
+           VERY SMALL PHONES
+           400px AND BELOW
+        ========================================= */
+
+        @media screen and (max-width: 400px) {
+
+            h1 {
+                font-size: 21px;
+                letter-spacing: 1px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+
+            /* Smaller player image */
+
+            .profile img {
+                width: 160px;
+                height: 190px;
+            }
+
+
+            /* Smaller boxes */
+
+            .profile,
+            .info {
+                padding: 15px;
+            }
+
+
+            .profile h3 {
+                font-size: 19px;
+            }
+
+            .info h3 {
+                font-size: 18px;
+            }
+
+
+            .profile p,
+            .info p {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+
+
+            /* Footer */
+
+            .footer {
+                font-size: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
+
+    <div class="header">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <img src="logo.png" alt="Football World Logo">
+
+        </div>
+
+
+        <!-- WEBSITE TITLE -->
+
+        <h1>FOOTBALL WORLD</h1>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="navigation">
+
+            <a href="home.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="contact.html">Contacts</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- PAGE TITLE -->
+    <!-- ============================= -->
+
+    <h2>FOOTBALL PLAYER PROFILE</h2>
+
+
+    <!-- ============================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================= -->
+
+    <div class="container">
+
+
+        <!-- PLAYER PROFILE -->
+
+        <div class="profile">
+
+            <img src="player.jpg" alt="Football Player">
+
+            <h3>FOOTBALL PLAYER</h3>
+
+            <p>
+                Welcome to the Football World player profile.
+                Here you can learn about a football player's
+                career, position, skills and achievements.
+            </p>
+
+        </div>
+
+
+        <!-- PLAYER INFORMATION -->
+
+        <div class="info">
+
+            <h3>Player Information</h3>
+
+            <p>
+                <b>Name:</b> Michael Olise
+            </p>
+
+            <p>
+                <b>Position:</b> Forward
+            </p>
+
+            <p>
+                <b>Nationality:</b> France
+            </p>
+
+            <p>
+                <b>Playing Style:</b> Fast and Skillful
+            </p>
+
+        </div>
+
+
+        <!-- FOOTBALL SKILLS -->
+
+        <div class="info">
+
+            <h3>Football Skills</h3>
+
+            <p>
+                A good football player needs skills such as
+                passing, shooting, dribbling, speed and teamwork.
+                These skills help players perform well during
+                competitive matches.
+            </p>
+
+        </div>
+
+
+        <!-- CAREER -->
+
+        <div class="info">
+
+            <h3>Career</h3>
+
+            <p>
+                A football career can begin at a young age.
+                Players can develop their skills through training,
+                local clubs, academies and professional competitions.
+            </p>
+
+        </div>
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <div class="info">
+
+            <h3>Achievements</h3>
+
+            <p>
+                Football players can achieve success by winning
+                league titles, cups and international competitions.
+                Individual awards can also recognise outstanding
+                performances.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <div class="footer">
+
+        WWW.FOOTBALLWORLD2026
+
+    </div>
+
+
+</body>
+
+</html>
